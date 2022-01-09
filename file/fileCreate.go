@@ -16,7 +16,8 @@ func main() {
 			fmt.Println(err)
 		} else {
 			for j := 0; j < lst[i]/5; j++ {
-				fp.WriteString("AbcdE")
+				fp.WriteString("あいう")
+				// fp.WriteString("AbcdE")
 			}
 		}
 	}
