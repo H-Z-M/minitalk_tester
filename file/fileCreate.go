@@ -15,8 +15,14 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		} else {
+<<<<<<< HEAD
 			for j := 0; j < lst[i]/10; j++ {
 				fp.WriteString("Abcdefghi_")
+=======
+			for j := 0; j < lst[i]/5; j++ {
+				fp.WriteString("あいう")
+				// fp.WriteString("AbcdE")
+>>>>>>> 9309f201cac29227de0735e2f580fda2d1ef2e06
 			}
 		}
 	}
