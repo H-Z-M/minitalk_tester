@@ -1,5 +1,1 @@
-<<<<<<< HEAD
 Abcdefghi_Abcdefghi_Abcdefghi_Abcdefghi_Abcdefghi_Abcdefghi_Abcdefghi_Abcdefghi_Abcdefghi_Abcdefghi_
-=======
-あいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいうあいう
->>>>>>> 9309f201cac29227de0735e2f580fda2d1ef2e06
