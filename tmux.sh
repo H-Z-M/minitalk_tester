@@ -5,6 +5,7 @@ ft_test()
 	make -C ..> /dev/null
 	cp ../server ../client .
 	clang++ time.cpp -o time > /dev/null
+	gcc unicode.c -o uni > /dev/null
 	tmux kill-pane -t 1 > /dev/null 2>&1
 	tmux split-window -h
 	tmux send-keys -t 1 './server' C-m
@@ -56,16 +57,15 @@ ft_test()
 	# do
 	# 	./time $pid "file/200000.txt"
 	# done
-
-
 	./client $pid "___END___"
-	# for i in `seq 1 10`
-	# do
-	# 	echo -n "."
-	# 	sleep 1
-	# done
-	# kill $pid
-	# make fclean > /dev/null
+
+	./time $pid "file/Arabic.txt"
+	./time $pid "file/Turkish.txt"
+	./time $pid "file/Persian.txt"
+	# unicode test
+	./client $pid `./uni 1 | iconv -f UTF-8 -t UTF-8`
+	./client $pid `./uni 2 | iconv -f UTF-16LE -t UTF-8`
+	./client $pid `./uni 3 | iconv -f UTF-32LE -t UTF-8`
 	echo -n "Delete the pane1? [y/n] "
 	read str
 	case "$str" in
@@ -77,7 +77,7 @@ ft_test()
 		*)
 			echo "undefined";;
 	esac
-	rm time client server
+	rm time client server uni
 }
 
 foo()
